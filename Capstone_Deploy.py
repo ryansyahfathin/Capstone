@@ -28,7 +28,6 @@ st.subheader("🔍 Preview Data")
 st.dataframe(df.head())
 
 # Preprocessing
-st.subheader("🔧 Preprocessing Awal")
 df['Platform'] = df['Platform'].astype(str).str.strip().str.title()
 df['Post Type'] = df['Post Type'].astype(str).str.strip().str.title()
 df['Audience Gender'] = df['Audience Gender'].astype(str).str.strip().str.title()
