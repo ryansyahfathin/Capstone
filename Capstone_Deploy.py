@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import gdown
+import os
+
 
 # Title dan Deskripsi
 st.title("📊 Analisis Dataset Sosial Media")
