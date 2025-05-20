@@ -8,7 +8,7 @@ import os
 
 # Title dan Deskripsi
 st.title("📊 Analisis Dataset Sosial Media")
-st.write("Mengunduh dataset dari Google Drive dan melakukan preprocessing awal.")
+st.write("Mengunduh dataset dari Google Drive.")
 
 # Unduh file dari Google Drive
 file_id = '1E4W1RvNGgyawc6I4TxQk76n289FX9kCK'
