@@ -43,8 +43,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from transformers import pipeline
 import os
 
-st.subheader("🧹 Pembersihan Kolom Tidak Relevan")
-
 # Drop kolom yang tidak relevan
 drop_cols = [
     'Post ID', 'Date', 'Time',
@@ -54,11 +52,6 @@ drop_cols = [
 ]
 df.drop(columns=drop_cols, inplace=True)
 
-st.success("Kolom tidak relevan telah dibuang.")
-
-# Inisialisasi Analisis Sentimen
-st.subheader("💬 Inisialisasi Sentimen VADER dan IndoBERT")
-
 # Download VADER Lexicon
 with st.spinner("Mengunduh lexicon VADER..."):
     nltk.download('vader_lexicon')
@@ -67,12 +60,10 @@ with st.spinner("Mengunduh lexicon VADER..."):
 try:
     vader_analyzer = SentimentIntensityAnalyzer()
     indo_sentiment = pipeline("sentiment-analysis", model="indobenchmark/indobert-base-p1")
-    st.success("Model VADER dan IndoBERT siap digunakan ✅")
 except Exception as e:
     st.error(f"Gagal inisialisasi model: {e}")
 
 # --- ANALISIS SENTIMEN VADER ---
-st.subheader("💬 Analisis Sentimen Caption")
 nltk.download('vader_lexicon')
 vader_analyzer = SentimentIntensityAnalyzer()
 
