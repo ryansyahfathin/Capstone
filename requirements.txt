@@ -4,8 +4,8 @@ numpy
 matplotlib
 seaborn
 nltk
+gdown
+openpyxl
 scikit-learn
 transformers
-gdown
-openyxl
 torch
